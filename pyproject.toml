@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "async-file-uploader"
+version = "0.1.0"
+description = "Async bulk file uploader with background tasks and WebSocket support"
+authors = ["earlinn <earlinndrow@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.1.7"
+djangorestframework = "^3.15.2"
+python-dotenv = "^1.0.1"
+celery = "^5.4.0"
+redis = "^5.2.1"
+channels = "^4.2.0"
+channels-redis = "^4.2.1"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.1.2"
+isort = "^6.0.1"
+pep8-naming = "^0.14.1"
+flake8-broken-line = "^1.0.0"
+flake8-return = "^1.2.0"
+flake8-isort = "^6.1.2"
+black = "^25.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
