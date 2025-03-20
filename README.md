@@ -1,6 +1,23 @@
 # async_file_uploader
 
-## Создание виртуального окружения в Poetry
+![Static Badge](https://img.shields.io/badge/Python-FFD43B?logo=python&logoColor=blue) 
+![Static Badge](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=green)
+![Static Badge](https://img.shields.io/badge/celery-%2337814A.svg?logo=celery&logoColor=white)
+![Static Badge](https://img.shields.io/badge/redis-%23DC382D.svg?&style=for-the-badge&logo=redis&logoColor=white)
+[![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
+![code style](https://img.shields.io/badge/code%20style-black-000000.svg)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+
+## Описание проекта
+АПИ с эндпоинтом для массовой загрузки файлов с обработкой в фоне и WebSocket-уведомлениями.
+
+## Предварительные условия
+На компьютере должны быть установлены:
+- [Python 3.12](https://www.python.org/downloads/)
+- [Poetry](https://python-poetry.org/docs/#installation) для работы с зависимостями
+- [Postman](https://www.postman.com/) для проверки работоспособности
+
+## Создание виртуального окружения в Poetry и установка зависимостей
 
 ```
 poetry init  # указываем версию python3.12 и заполняем остальные поля pyproject.toml
@@ -9,6 +26,15 @@ poetry install  # установить зависимости из файла po
 ```
 
 ## Запуск без Docker
+Создать в папке src/config файл с названием ".env" и следующим содержанием:
+
+```
+SECRET_KEY=key
+MODE=dev
+CELERY_BROKER=redis://127.0.0.1:6379
+CELERY_BACKEND=redis://127.0.0.1:6379
+```
+
 Открыть 3 терминала:
 - в первом запустить redis-server;
 - во втором активировать виртуальное окружение командой poetry shell, выполнить миграции 
