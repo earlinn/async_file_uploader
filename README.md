@@ -3,7 +3,7 @@
 ![Static Badge](https://img.shields.io/badge/Python-FFD43B?logo=python&logoColor=blue) 
 ![Static Badge](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=green)
 ![Static Badge](https://img.shields.io/badge/celery-%2337814A.svg?logo=celery&logoColor=white)
-![Static Badge](https://img.shields.io/badge/redis-%23DC382D.svg?&style=for-the-badge&logo=redis&logoColor=white)
+![Static Badge](https://img.shields.io/badge/redis-%23DC382D.svg?logo=redis&logoColor=white)
 [![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
 ![code style](https://img.shields.io/badge/code%20style-black-000000.svg)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
