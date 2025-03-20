@@ -52,7 +52,9 @@ THIRD_PARTY_APPS = [
     "rest_framework",
 ]
 
-PROJECT_APPS = []
+PROJECT_APPS = [
+    "file_uploader.apps.FileUploaderConfig",
+]
 
 DEV_APPS = []
 
@@ -149,3 +151,21 @@ MEDIA_URL = "media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Celery settings
+
+CELERY_BROKER_URL = os.getenv("CELERY_BROKER", default="redis://localhost:6379")
+CELERY_RESULT_BACKEND = os.getenv("CELERY_BACKEND", default="redis://localhost:6379")
+
+# Channels settings
+
+ASGI_APPLICATION = "config.asgi.application"
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
+}

@@ -172,3 +172,15 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# example files
+example_files/
+
+# media files
+media/
+
+# vscode
+.vscode/
+
+# redis dumps
+*.rdb
